@@ -2,8 +2,10 @@
 const express = require("express")
 const app = express()
 
+app.set("view engine", "pug")
+
 app.get("/", (request, result)=>{
-  result.send("<h1>Hello, World!</h1>")
+  result.render("main")
 })
 
 app.listen(3000, ()=>{
